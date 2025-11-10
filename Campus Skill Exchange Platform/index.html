@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Campus Skill Exchange</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Campus Skill Exchange</h1>
+
+    <form id="exchangeForm" enctype="multipart/form-data">
+      <input type="text" id="name" placeholder="Your Name" required />
+      <input type="email" id="email" placeholder="Your Email" required />
+      <input type="tel" id="phone" placeholder="Your Phone" required />
+
+      <select id="location" required>
+        <option value="">Select Location</option>
+        <option value="Hostel ">Hostel</option>
+        <option value="Ground">Ground</option>
+        <option value="Library">Library</option>
+        <option value="CSE Dept">CSE Department</option>
+      </select>
+      <select id="skillHaveCategory" required>
+        <option value="">Skill You Can Teach</option>
+        <option value="Coding">Coding</option>
+        <option value="Music">Music</option>
+        <option value="Languages">Languages</option>
+        <option value="Art">Art</option>
+        <option value="Other">Other</option>
+      </select>
+      <input type="text" id="skillHave" placeholder="Specific Skill You Can Teach" required />
+
+      <select id="skillNeedCategory" required>
+        <option value="">Skill You Want to Learn</option>
+        <option value="Coding">Coding</option>
+        <option value="Music">Music</option>
+        <option value="Languages">Languages</option>
+        <option value="Art">Art</option>
+        <option value="Other">Other</option>
+      </select>
+      <input type="text" id="skillNeed" placeholder="Specific Skill You Want to Learn" required />
+
+      <label for="availability">Availability:</label>
+      <input type="datetime-local" id="availability" required />
+
+      <textarea id="description" placeholder="Brief Description or Notes..." rows="3"></textarea>
+
+      <button type="submit">Post Offer</button>
+    </form>
+
+    <hr />
+
+    <input type="text" id="search" placeholder="Search by skill, name, or location..." />
+
+    <div id="filters">
+      <label>Filter by Category:</label>
+      <select id="filterCategory">
+        <option value="">All</option>
+        <option value="Coding">Coding</option>
+        <option value="Music">Music</option>
+        <option value="Languages">Languages</option>
+        <option value="Art">Art</option>
+      </select>
+    </div>
+
+    <div id="exchangeList"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
